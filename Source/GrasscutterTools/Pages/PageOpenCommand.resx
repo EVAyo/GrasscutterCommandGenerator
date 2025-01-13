@@ -932,7 +932,7 @@
     <value>136, 34</value>
   </data>
   <data name="TxtHost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 23</value>
+    <value>182, 25</value>
   </data>
   <data name="TxtHost.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -941,7 +941,7 @@
     <value>TxtHost</value>
   </data>
   <data name="&gt;&gt;TxtHost.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TxtHost.Parent" xml:space="preserve">
     <value>$this</value>
@@ -959,7 +959,7 @@
     <value>324, 34</value>
   </data>
   <data name="BtnQueryServerStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
+    <value>50, 25</value>
   </data>
   <data name="BtnQueryServerStatus.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1022,6 +1022,6 @@
     <value>PageOpenCommand</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>GrasscutterTools.Pages.BasePage, GrasscutterTools, Version=1.7.4.0, Culture=neutral, PublicKeyToken=de2b1c089621e923</value>
+    <value>GrasscutterTools.Pages.BasePage, GrasscutterTools, Version=1.13.0.0, Culture=neutral, PublicKeyToken=de2b1c089621e923</value>
   </data>
 </root>

@@ -34,6 +34,8 @@ namespace GrasscutterTools.Pages
 {
     internal partial class PageMail : BasePage
     {
+        public override string Text => Resources.PageMailTitle;
+
         public PageMail()
         {
             InitializeComponent();
@@ -181,9 +183,9 @@ namespace GrasscutterTools.Pages
         /// </summary>
         private void LoadMailSelectableItems()
         {
-            MailSelectableItems = new string[GameData.Items.Count + GameData.Weapons.Count + GameData.Artifacts.Count];
+            MailSelectableItems = new string[GameData.Items.Lines.Length + GameData.Weapons.Count + GameData.Artifacts.Count];
             int i = 0;
-            GameData.Items.Lines.CopyTo(MailSelectableItems, i); i += GameData.Items.Count;
+            GameData.Items.Lines.CopyTo(MailSelectableItems, i); i += GameData.Items.Lines.Length;
             GameData.Weapons.Lines.CopyTo(MailSelectableItems, i); i += GameData.Weapons.Count;
             GameData.Artifacts.Lines.CopyTo(MailSelectableItems, i); i += GameData.Artifacts.Count;
 
@@ -199,6 +201,15 @@ namespace GrasscutterTools.Pages
         private void TxtMailSelectableItemFilter_TextChanged(object sender, EventArgs e)
         {
             UIUtil.ListBoxFilter(ListMailSelectableItems, MailSelectableItems, TxtMailSelectableItemFilter.Text);
+            LblClearFilter.Visible = TxtMailSelectableItemFilter.Text.Length > 0;
+        }
+
+        /// <summary>
+        /// 点击清空过滤栏标签时触发
+        /// </summary>
+        private void LblClearFilter_Click(object sender, EventArgs e)
+        {
+            TxtMailSelectableItemFilter.Clear();
         }
 
         #endregion -- 邮件附件可选列表 Mail item selectable list --
@@ -287,5 +298,10 @@ namespace GrasscutterTools.Pages
         }
 
         #endregion -- 邮件列表 Mail list --
+
+        private void ListMailItems_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            e.ItemHeight = ListMailItems.Font.Height * 3 / 2;
+        }
     }
 }

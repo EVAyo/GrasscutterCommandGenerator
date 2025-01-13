@@ -33,10 +33,12 @@ namespace GrasscutterTools.Pages
 {
     internal partial class PageSpawn : BasePage
     {
+        public override string Text => Resources.PageSpawnTitle;
+
         public PageSpawn()
         {
             InitializeComponent();
-
+            if (DesignMode) return;
             InitSpawnRecord();
         }
 
@@ -52,36 +54,31 @@ namespace GrasscutterTools.Pages
 
         #region -- 实体列表 --
 
+        private List<string[]> EntityList;
+
         /// <summary>
         /// 初始化实体列表
         /// </summary>
         private void InitEntityList()
         {
-            // 初始化列表类型过滤器
-            MenuSpawnEntityFilter.SuspendLayout();
-            MenuSpawnEntityFilter.Items.Clear();
-            void AddTypes(ItemMapGroup group)
-            {
-                foreach (var kv in group)
-                {
-                    var item = new ToolStripMenuItem
-                    {
-                        Text = kv.Key,
-                        Tag = kv.Value.Lines,
-                    };
-                    item.Click += OnEntityTypeFilterClick;
-                    MenuSpawnEntityFilter.Items.Add(item);
-                }
-            }
-            //MenuSpawnEntityFilter.Items.Add(new ToolStripLabel("Monsters"));
-            AddTypes(GameData.Monsters);
-            MenuSpawnEntityFilter.Items.Add(new ToolStripSeparator());
-            //MenuSpawnEntityFilter.Items.Add(new ToolStripLabel("Gadgets"));
-            AddTypes(GameData.Gadgets);
-            MenuSpawnEntityFilter.ResumeLayout();
+            var types = new List<string>();
+            var entityList = new List<string[]>();
 
+            types.Add(Resources.All);
             // 默认显示所有
             SelectedEntityTypeLines = GameData.Monsters.AllLines.Concat(GameData.Gadgets.AllLines).ToArray();
+            entityList.Add(SelectedEntityTypeLines);
+            types.AddRange(GameData.Monsters.Select(it => it.Key));
+            entityList.AddRange(GameData.Monsters.Select(it => it.Value.Lines));
+            types.AddRange(GameData.Gadgets.Select(it => it.Key));
+            entityList.AddRange(GameData.Gadgets.Select(it => it.Value.Lines));
+
+            CmbFilterEntity.DataSource = types;
+            EntityList = entityList;
+            
+
+            //Console.WriteLine(string.Join("\n", GameData.Gadgets.Keys));
+            
             LoadEntityList();
         }
 
@@ -90,13 +87,16 @@ namespace GrasscutterTools.Pages
         /// </summary>
         private string[] SelectedEntityTypeLines;
 
+        
         /// <summary>
-        /// 实体类型过滤器类型选中时触发
+        /// 类别选中时触发
         /// </summary>
-        private void OnEntityTypeFilterClick(object sender, EventArgs e)
+        private void CmbFilterEntity_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var btn = sender as ToolStripMenuItem;
-            SelectedEntityTypeLines = btn.Tag as string[];
+            if (CmbFilterEntity.SelectedIndex < 0 || EntityList == null) return;
+            var lines = EntityList[CmbFilterEntity.SelectedIndex];
+            if (SelectedEntityTypeLines == lines) return;
+            SelectedEntityTypeLines = lines;
             LoadEntityList();
         }
 
@@ -114,15 +114,17 @@ namespace GrasscutterTools.Pages
         private void TxtEntityFilter_TextChanged(object sender, EventArgs e)
         {
             LoadEntityList();
+            LblClearFilter.Visible = TxtEntityFilter.Text.Length > 0;
         }
 
         /// <summary>
-        /// 实体列表类型过滤按钮点击时触发
+        /// 点击清空过滤栏标签时触发
         /// </summary>
-        private void BtnFilterEntity_Click(object sender, EventArgs e)
+        private void LblClearFilter_Click(object sender, EventArgs e)
         {
-            MenuSpawnEntityFilter.Show(BtnFilterEntity, 0, BtnFilterEntity.Height);
+            TxtEntityFilter.Clear();
         }
+
 
         /// <summary>
         /// 实体列表选中项改变时触发
@@ -274,6 +276,8 @@ namespace GrasscutterTools.Pages
                 CheckAndConnect(NUDEntityDef, -1, " def");
                 if (NUDEntityPosX.Value != 0 || NUDEntityPosY.Value != 0 || NUDEntityPosZ.Value != 0)
                     args += $" {NUDEntityPosX.Value} {NUDEntityPosY.Value} {NUDEntityPosZ.Value}";
+                if (ChkNoAggressiveness.Checked)
+                    args += " ai12001001";
                 SetCommand("/spawn", args);
             }
             else

@@ -27,6 +27,8 @@ namespace GrasscutterTools.Pages
 {
     internal partial class PageScene : BasePage
     {
+        public override string Text => Resources.PageSceneTitle;
+
         public PageScene()
         {
             InitializeComponent();
@@ -53,8 +55,6 @@ namespace GrasscutterTools.Pages
         public override void OnLoad()
         {
             Scenes = GameData.Scenes.Lines;
-            CmbClimateType.Items.Clear();
-            CmbClimateType.Items.AddRange(Resources.ClimateType.Split(','));
         }
 
         /// <summary>
@@ -76,11 +76,29 @@ namespace GrasscutterTools.Pages
         }
 
         /// <summary>
+        /// 选中过场时触发
+        /// </summary>
+        private void RbListCutScene_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RbListCutScene.Checked)
+                Scenes = GameData.CutScenes.Lines;
+        }
+
+        /// <summary>
         /// 场景列表过滤器输入项改变时触发
         /// </summary>
         private void TxtSceneFilter_TextChanged(object sender, EventArgs e)
         {
             UIUtil.ListBoxFilter(ListScenes, Scenes, TxtSceneFilter.Text);
+            LblClearFilter.Visible = TxtSceneFilter.Text.Length > 0;
+        }
+
+        /// <summary>
+        /// 点击清空过滤栏标签时触发
+        /// </summary>
+        private void LblClearFilter_Click(object sender, EventArgs e)
+        {
+            TxtSceneFilter.Clear();
         }
 
         /// <summary>
@@ -102,35 +120,21 @@ namespace GrasscutterTools.Pages
             {
                 if (CommandVersion.Check(CommandVersion.V1_2_2))
                 {
-                    SetCommand("/scene", id.ToString());
+                    SetCommand("/tp", $"0 400 0 {id}");
                 }
                 else
                 {
-                    SetCommand("/tp ~ ~ ~", id.ToString());
+                    SetCommand("/scene", id.ToString());
                 }
             }
             else if (RbListDungeons.Checked)
             {
                 SetCommand("/dungeon", id.ToString());
             }
-        }
-
-        /// <summary>
-        /// 气候类型列表
-        /// </summary>
-        private static readonly string[] climateTypes = { "none", "sunny", "cloudy", "rain", "thunderstorm", "snow", "mist" };
-
-        /// <summary>
-        /// 气候类型下拉框选中项改变时触发
-        /// </summary>
-        private void CmbClimateType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (CmbClimateType.SelectedIndex < 0)
-                return;
-            if (CommandVersion.Check(CommandVersion.V1_2_2))
-                SetCommand("/weather", CmbClimateType.SelectedIndex < climateTypes.Length ? climateTypes[CmbClimateType.SelectedIndex] : "none");
-            else
-                SetCommand("/weather", $"0 {CmbClimateType.SelectedIndex}");
+            else if (RbListCutScene.Checked)
+            {
+                SetCommand("/cutscene", id.ToString());
+            }
         }
 
         /// <summary>
@@ -142,6 +146,19 @@ namespace GrasscutterTools.Pages
             if (ChkIncludeSceneId.Checked && RbListScene.Checked && ListScenes.SelectedIndex != -1)
                 args += $" {GameData.Scenes.Ids[ListScenes.SelectedIndex]}";
             SetCommand("/tp", args);
+        }
+
+        /// <summary>
+        /// 冻结游戏时间
+        /// </summary>
+        private void BtnFreezeTime_Click(object sender, EventArgs e)
+        {
+            SetCommand("/prop", "is_game_time_locked  on");
+        }
+
+        private void ListScenes_MeasureItem(object sender, System.Windows.Forms.MeasureItemEventArgs e)
+        {
+            e.ItemHeight = ListScenes.Font.Height * 3 / 2;
         }
     }
 }

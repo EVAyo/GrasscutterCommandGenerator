@@ -30,6 +30,8 @@ namespace GrasscutterTools.Pages
 {
     internal partial class PageGiveArtifact : BasePage
     {
+        public override string Text => Resources.PageGetArtifactTitle;
+
         public PageGiveArtifact()
         {
             InitializeComponent();
@@ -262,6 +264,11 @@ namespace GrasscutterTools.Pages
         private void LnkCharacterBuilder_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UIUtil.OpenURL("https://github.com/Penelopeep/CharacterBuilder");
+        }
+
+        private void ListSubAttributionChecked_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            e.ItemHeight = ListSubAttributionChecked.Font.Height * 3 / 2;
         }
     }
 }

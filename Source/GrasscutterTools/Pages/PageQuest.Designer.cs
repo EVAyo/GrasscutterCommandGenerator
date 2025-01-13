@@ -38,6 +38,8 @@
             this.LblQuestDescription = new System.Windows.Forms.Label();
             this.TxtQuestFilter = new System.Windows.Forms.TextBox();
             this.ListQuest = new System.Windows.Forms.ListBox();
+            this.LblClearFilter = new System.Windows.Forms.Label();
+            this.ChkAddAndFinishQuest = new System.Windows.Forms.CheckBox();
             this.GrpQuestFilters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,11 +108,29 @@
             resources.ApplyResources(this.ListQuest, "ListQuest");
             this.ListQuest.FormattingEnabled = true;
             this.ListQuest.Name = "ListQuest";
+            this.ListQuest.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.ListQuest_MeasureItem);
+            this.ListQuest.SelectedIndexChanged += new System.EventHandler(this.ListQuest_SelectedIndexChanged);
+            // 
+            // LblClearFilter
+            // 
+            resources.ApplyResources(this.LblClearFilter, "LblClearFilter");
+            this.LblClearFilter.BackColor = System.Drawing.Color.White;
+            this.LblClearFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblClearFilter.Name = "LblClearFilter";
+            this.LblClearFilter.Click += new System.EventHandler(this.LblClearFilter_Click);
+            // 
+            // ChkAddAndFinishQuest
+            // 
+            resources.ApplyResources(this.ChkAddAndFinishQuest, "ChkAddAndFinishQuest");
+            this.ChkAddAndFinishQuest.Name = "ChkAddAndFinishQuest";
+            this.ChkAddAndFinishQuest.UseVisualStyleBackColor = true;
             // 
             // PageQuest
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ChkAddAndFinishQuest);
+            this.Controls.Add(this.LblClearFilter);
             this.Controls.Add(this.GrpQuestFilters);
             this.Controls.Add(this.BtnFinishQuest);
             this.Controls.Add(this.BtnAddQuest);
@@ -136,5 +156,7 @@
         private System.Windows.Forms.Label LblQuestDescription;
         private System.Windows.Forms.TextBox TxtQuestFilter;
         private System.Windows.Forms.ListBox ListQuest;
+        private System.Windows.Forms.Label LblClearFilter;
+        private System.Windows.Forms.CheckBox ChkAddAndFinishQuest;
     }
 }

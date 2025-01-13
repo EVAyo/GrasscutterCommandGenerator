@@ -22,11 +22,14 @@ using System.Linq;
 using System.Windows.Forms;
 
 using GrasscutterTools.Game;
+using GrasscutterTools.Properties;
 
 namespace GrasscutterTools.Pages
 {
     internal partial class PageQuest : BasePage
     {
+        public override string Text => Resources.PageQuestTitle;
+
         public PageQuest()
         {
             InitializeComponent();
@@ -60,6 +63,16 @@ namespace GrasscutterTools.Pages
                 return true;
             }).ToArray());
             ListQuest.EndUpdate();
+
+            LblClearFilter.Visible = TxtQuestFilter.Text.Length > 0;
+        }
+
+        /// <summary>
+        /// 点击清空过滤栏标签时触发
+        /// </summary>
+        private void LblClearFilter_Click(object sender, EventArgs e)
+        {
+            TxtQuestFilter.Clear();
         }
 
         /// <summary>
@@ -71,7 +84,24 @@ namespace GrasscutterTools.Pages
                 return;
             var item = ListQuest.SelectedItem as string;
             var id = ItemMap.ToId(item);
-            SetCommand("/quest", $"{(sender as Button).Tag} {id}");
+            SetCommand("/quest", $"{(sender == BtnAddQuest ? "add" : "finish")} {id}");
+        }
+
+        /// <summary>
+        /// 列表选中项改变时触发
+        /// </summary>
+        private void ListQuest_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!ChkAddAndFinishQuest.Checked || ListQuest.SelectedIndex == -1) return;
+
+            var item = ListQuest.SelectedItem as string;
+            var id = ItemMap.ToId(item);
+            SetCommand($"/quest add {id} | /quest finish {id}");
+        }
+
+        private void ListQuest_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            e.ItemHeight = ListQuest.Font.Height * 3 / 2;
         }
     }
 }

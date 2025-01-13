@@ -21,7 +21,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-
+using GrasscutterTools.Forms;
 using GrasscutterTools.Properties;
 
 using GrasscutterTools.Utils;
@@ -30,6 +30,8 @@ namespace GrasscutterTools.Pages
 {
     internal partial class PageCustomCommands : BasePage
     {
+        public override string Text => Resources.PageCustomCommandsTitle;
+
         public PageCustomCommands()
         {
             InitializeComponent();
@@ -248,5 +250,39 @@ namespace GrasscutterTools.Pages
                 LoadCustomCommandControls(Resources.CustomCommands);
             }
         }
+
+        /// <summary>
+        /// 点击添加快捷键时触发
+        /// </summary>
+        private void BtnAddHotKey_Click(object sender, EventArgs e)
+        {
+            var name = TxtCustomName.Text.Trim();
+            if (string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show(Resources.CommandTagCannotBeEmpty, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // 跳转到快捷键界面
+            FormMain.Instance.NavigateTo<PageHotKey>()?
+                .AddNewHotKey(name); // 设置标签
+        }
+
+        /// <summary>
+        /// 标签栏文本改变时触发
+        /// </summary>
+        private void TxtCustomName_TextChanged(object sender, EventArgs e)
+        {
+            LblClearFilter.Visible = TxtCustomName.Text.Length > 0;
+        }
+
+        /// <summary>
+        /// 点击清空标签栏标签时触发
+        /// </summary>
+        private void LblClearFilter_Click(object sender, EventArgs e)
+        {
+            TxtCustomName.Clear();
+        }
+
     }
 }

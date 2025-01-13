@@ -181,8 +181,8 @@
   <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
-  <data name="GachaBennerPrefab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-us\GachaBennerPrefab.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="GachaBannerPrefab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en-us\GachaBannerPrefab.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="Help" xml:space="preserve">
     <value>Help</value>
@@ -285,10 +285,109 @@ Improvement suggestions have been submitted, please use caution to send emails t
   <data name="ShopJsonOverrideWarning" xml:space="preserve">
     <value>Only allowed to save in Shop.json format! Are you sure you want to overwrite the currently specified file?</value>
   </data>
-  <data name="GachaBennerTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-us\GachaBennerTitle.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;gb2312</value>
+  <data name="GachaBannerTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en-us\GachaBannerTitle.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;gb2312</value>
   </data>
   <data name="Dungeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\en-us\Dungeon.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="TaskRunningCannotOperated" xml:space="preserve">
+    <value>The task has already started and cannot be operated</value>
+  </data>
+  <data name="PageAboutTitle" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="PageAvatarTitle" xml:space="preserve">
+    <value>Avatar</value>
+  </data>
+  <data name="PageCustomCommandsTitle" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="PageGetArtifactTitle" xml:space="preserve">
+    <value>Artifacts</value>
+  </data>
+  <data name="PageGiveItemTitle" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="PageGiveWeaponTitle" xml:space="preserve">
+    <value>Weapons</value>
+  </data>
+  <data name="PageHomeTitle" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="PageMailTitle" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="PageManagementTitle" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="PageOpenCommandTitle" xml:space="preserve">
+    <value>Remote</value>
+  </data>
+  <data name="PageQuestTitle" xml:space="preserve">
+    <value>Quest</value>
+  </data>
+  <data name="PageSceneTitle" xml:space="preserve">
+    <value>Scene</value>
+  </data>
+  <data name="PageSpawnTitle" xml:space="preserve">
+    <value>Spawn</value>
+  </data>
+  <data name="PageTasksTitle" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="Achievement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en-us\Achievement.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SelectAnyItem" xml:space="preserve">
+    <value>Plase select any item first!</value>
+  </data>
+  <data name="PageAchievementTitle" xml:space="preserve">
+    <value>Achievement</value>
+  </data>
+  <data name="PageSetPropTitle" xml:space="preserve">
+    <value>Property</value>
+  </data>
+  <data name="PlayerProperty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en-us\PlayerProperty.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Cutscene" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en-us\Cutscene.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;gb2312</value>
+  </data>
+  <data name="Activity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en-us\Activity.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PageHotKey" xml:space="preserve">
+    <value>HotKey</value>
+  </data>
+  <data name="Gadget" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en-us\Gadget.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="StartProxy" xml:space="preserve">
+    <value>Start Proxy</value>
+  </data>
+  <data name="StopProxy" xml:space="preserve">
+    <value>Stop Proxy</value>
+  </data>
+  <data name="PageSceneTagTitle" xml:space="preserve">
+    <value>SceneTag</value>
+  </data>
+  <data name="TrustedBeforeContinuing" xml:space="preserve">
+    <value>The root certificate must be trusted before continuing!</value>
+  </data>
+  <data name="PageProxyTitle" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="PageSettingsTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="PageWeatherTitle" xml:space="preserve">
+    <value>Weather</value>
+  </data>
+  <data name="Weather" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en-us\Weather.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

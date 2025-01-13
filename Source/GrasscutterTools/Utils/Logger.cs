@@ -23,8 +23,10 @@ using System.Windows.Forms;
 
 namespace GrasscutterTools.Utils
 {
-    public static class Logger
+    internal static class Logger
     {
+        public static bool IsSaveLogs = false;
+
         private static readonly string LogPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), $"GcTools-{DateTime.Now:MMdd}.log");
 
         private static void Write(string message)
@@ -32,12 +34,22 @@ namespace GrasscutterTools.Utils
 #if DEBUG
             Console.WriteLine($"{DateTime.Now:mm:ss.fff} {message}");
 #else
-            // Test log
-            //File.AppendAllText(LogPath, $"{DateTime.Now:mm:ss.fff} {message}{Environment.NewLine}");
+            if (IsSaveLogs)
+            {
+                Console.WriteLine($"{DateTime.Now:mm:ss.fff} {message}");
+                File.AppendAllText(LogPath, $"{DateTime.Now:mm:ss.fff} {message}{Environment.NewLine}");
+            }
 #endif
         }
 
         private static void Write(string level, string tag, string message) => Write($"<{level}:{tag}> {message}");
+
+        //public static void Debug(string message) => Write("DEBUG", "Proxy", message);
+
+        //public static void Info(string info) => Write("INFO", "Proxy", info);
+
+        //public static void Error(Exception ex) => Write("ERROR", "Proxy", ex.ToString());
+
 
         public static void I(string tag, string info) => Write("INFO", tag, info);
 

@@ -28,7 +28,7 @@ namespace GrasscutterTools.Game.Gacha
     /// <summary>
     /// https://github.com/Grasscutters/Grasscutter/pull/639
     /// </summary>
-    public class GachaBanner3
+    internal class GachaBanner3
     {
         /// <summary>
         /// 备注
@@ -37,8 +37,12 @@ namespace GrasscutterTools.Game.Gacha
         public string Comment { get; set; }
 
         /// <summary>
-        /// 添加卡池请从400开始增加id数值进行添加，这个id需要每个池子不一样，
-        /// 如果你想添加大量卡池，请按照每次增加固定数值的id进行添加，比如：411，412，413....
+        /// 卡池类型
+        /// 100 初行祈愿
+        /// 200 常驻祈愿
+        /// 301 角色活动祈愿1
+        /// 302 武器活动祈愿
+        /// 400 角色活动祈愿2
         /// </summary>
         [JsonProperty("gachaType")]
         public int GachaType { get; set; } = 400;
@@ -59,7 +63,7 @@ namespace GrasscutterTools.Game.Gacha
         /// <summary>
         /// 这个是抽卡的预览背景路径id
         /// </summary>
-        [JsonProperty("previewPrefabPath")]
+        [JsonProperty("previewPrefabPath"), JsonIgnore]
         public string PreviewPrefabPath { get; set; } = "UI_Tab_GachaShowPanel_A007";
 
         /// <summary>

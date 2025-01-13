@@ -33,6 +33,8 @@ namespace GrasscutterTools.Pages
 {
     internal partial class PageGiveItem : BasePage
     {
+        public override string Text => Resources.PageGiveItemTitle;
+
         public PageGiveItem()
         {
             InitializeComponent();
@@ -41,13 +43,54 @@ namespace GrasscutterTools.Pages
             InitGiveItemRecord();
         }
 
+        private List<string[]> ItemList;
+
         /// <summary>
         /// 初始化游戏物品列表
         /// </summary>
         public override void OnLoad()
         {
-            ListGameItems.Items.Clear();
-            ListGameItems.Items.AddRange(GameData.Items.Lines);
+            var types = new List<string>();
+            var itemList = new List<string[]>();
+
+            types.Add(Resources.All);
+            SelectedItemTypeLines = GameData.Items.Lines;
+            itemList.Add(SelectedItemTypeLines);
+            foreach (var kv in GameData.Items)
+            {
+                types.Add(kv.Key);
+                itemList.Add(kv.Value.Lines);
+            }
+
+            CmbFilterItem.DataSource = types;
+            ItemList = itemList;
+            
+            LoadItemList();
+        }
+
+        /// <summary>
+        /// 当前选中的物品类型行
+        /// </summary>
+        private string[] SelectedItemTypeLines;
+
+        /// <summary>
+        /// 点击过滤物品按钮时触发
+        /// </summary>
+        private void CmbFilterItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CmbFilterItem.SelectedIndex < 0 || ItemList == null) return;
+            var lines = ItemList[CmbFilterItem.SelectedIndex];
+            if (SelectedItemTypeLines == lines) return;
+            SelectedItemTypeLines = lines;
+            LoadItemList();
+        }
+
+        /// <summary>
+        /// 加载物品列表
+        /// </summary>
+        private void LoadItemList()
+        {
+            UIUtil.ListBoxFilter(ListGameItems, SelectedItemTypeLines, TxtGameItemFilter.Text);
         }
 
         /// <summary>
@@ -55,7 +98,16 @@ namespace GrasscutterTools.Pages
         /// </summary>
         private void TxtGameItemFilter_TextChanged(object sender, EventArgs e)
         {
-            UIUtil.ListBoxFilter(ListGameItems, GameData.Items.Lines, TxtGameItemFilter.Text);
+            LoadItemList();
+            LblClearFilter.Visible = TxtGameItemFilter.Text.Length > 0;
+        }
+
+        /// <summary>
+        /// 点击清空过滤器标签时触发
+        /// </summary>
+        private void LblClearFilter_Click(object sender, EventArgs e)
+        {
+            TxtGameItemFilter.Clear();
         }
 
         /// <summary>
@@ -69,14 +121,25 @@ namespace GrasscutterTools.Pages
             {
                 var id = ItemMap.ToId(name);
 
+                NUDGameItemLevel.Enabled = true;
                 if (ChkDrop.Checked)
                 {
-                    NUDGameItemLevel.Enabled = false;
-                    SetCommand("/drop", $"{id} {NUDGameItemAmout.Value}");
+                    if (CommandVersion.Check(CommandVersion.V1_3_1))
+                    {
+                        SetCommand("/spawn", $"{id} x{NUDGameItemAmout.Value} lv{NUDGameItemLevel.Value}");
+                    }
+                    else if (CommandVersion.Check(CommandVersion.V1_2_2))
+                    {
+                        SetCommand("/spawn", $"{id} {NUDGameItemAmout.Value} {NUDGameItemLevel.Value}");
+                    }
+                    else
+                    {
+                        NUDGameItemLevel.Enabled = false;
+                        SetCommand("/drop", $"{id} {NUDGameItemAmout.Value}");
+                    }
                 }
                 else
                 {
-                    NUDGameItemLevel.Enabled = true;
                     if (CommandVersion.Check(CommandVersion.V1_2_2))
                         SetCommand("/give", $"{id} x{NUDGameItemAmout.Value} lv{NUDGameItemLevel.Value}");
                     else
@@ -94,6 +157,7 @@ namespace GrasscutterTools.Pages
         {
             GenGiveItemCommand();
         }
+
 
         #region -- 物品记录 --
 
@@ -185,5 +249,10 @@ namespace GrasscutterTools.Pages
         }
 
         #endregion -- 物品记录 --
+
+        private void ListGameItems_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            e.ItemHeight = ListGameItems.Font.Height * 3 / 2;
+        }
     }
 }

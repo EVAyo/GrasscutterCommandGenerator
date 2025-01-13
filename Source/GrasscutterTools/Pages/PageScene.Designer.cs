@@ -40,11 +40,12 @@
             this.NUDTpZ = new System.Windows.Forms.NumericUpDown();
             this.NUDTpY = new System.Windows.Forms.NumericUpDown();
             this.NUDTpX = new System.Windows.Forms.NumericUpDown();
-            this.CmbClimateType = new System.Windows.Forms.ComboBox();
-            this.LblClimateType = new System.Windows.Forms.Label();
             this.LblSceneDescription = new System.Windows.Forms.Label();
             this.ListScenes = new System.Windows.Forms.ListBox();
             this.LblTp = new System.Windows.Forms.Label();
+            this.RbListCutScene = new System.Windows.Forms.RadioButton();
+            this.BtnFreezeTime = new System.Windows.Forms.Button();
+            this.LblClearFilter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NUDTpZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDTpY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDTpX)).BeginInit();
@@ -165,19 +166,6 @@
             -2147483648});
             this.NUDTpX.Name = "NUDTpX";
             // 
-            // CmbClimateType
-            // 
-            this.CmbClimateType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbClimateType.FormattingEnabled = true;
-            resources.ApplyResources(this.CmbClimateType, "CmbClimateType");
-            this.CmbClimateType.Name = "CmbClimateType";
-            this.CmbClimateType.SelectedIndexChanged += new System.EventHandler(this.CmbClimateType_SelectedIndexChanged);
-            // 
-            // LblClimateType
-            // 
-            resources.ApplyResources(this.LblClimateType, "LblClimateType");
-            this.LblClimateType.Name = "LblClimateType";
-            // 
             // LblSceneDescription
             // 
             resources.ApplyResources(this.LblSceneDescription, "LblSceneDescription");
@@ -188,6 +176,7 @@
             resources.ApplyResources(this.ListScenes, "ListScenes");
             this.ListScenes.FormattingEnabled = true;
             this.ListScenes.Name = "ListScenes";
+            this.ListScenes.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.ListScenes_MeasureItem);
             this.ListScenes.SelectedIndexChanged += new System.EventHandler(this.ListScenes_SelectedIndexChanged);
             // 
             // LblTp
@@ -195,10 +184,35 @@
             resources.ApplyResources(this.LblTp, "LblTp");
             this.LblTp.Name = "LblTp";
             // 
+            // RbListCutScene
+            // 
+            resources.ApplyResources(this.RbListCutScene, "RbListCutScene");
+            this.RbListCutScene.Name = "RbListCutScene";
+            this.RbListCutScene.UseVisualStyleBackColor = true;
+            this.RbListCutScene.CheckedChanged += new System.EventHandler(this.RbListCutScene_CheckedChanged);
+            // 
+            // BtnFreezeTime
+            // 
+            resources.ApplyResources(this.BtnFreezeTime, "BtnFreezeTime");
+            this.BtnFreezeTime.Name = "BtnFreezeTime";
+            this.BtnFreezeTime.UseVisualStyleBackColor = true;
+            this.BtnFreezeTime.Click += new System.EventHandler(this.BtnFreezeTime_Click);
+            // 
+            // LblClearFilter
+            // 
+            resources.ApplyResources(this.LblClearFilter, "LblClearFilter");
+            this.LblClearFilter.BackColor = System.Drawing.Color.White;
+            this.LblClearFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblClearFilter.Name = "LblClearFilter";
+            this.LblClearFilter.Click += new System.EventHandler(this.LblClearFilter_Click);
+            // 
             // PageScene
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LblClearFilter);
+            this.Controls.Add(this.BtnFreezeTime);
+            this.Controls.Add(this.RbListCutScene);
             this.Controls.Add(this.RbListDungeons);
             this.Controls.Add(this.RbListScene);
             this.Controls.Add(this.TxtSceneFilter);
@@ -210,8 +224,6 @@
             this.Controls.Add(this.NUDTpZ);
             this.Controls.Add(this.NUDTpY);
             this.Controls.Add(this.NUDTpX);
-            this.Controls.Add(this.CmbClimateType);
-            this.Controls.Add(this.LblClimateType);
             this.Controls.Add(this.LblSceneDescription);
             this.Controls.Add(this.ListScenes);
             this.Controls.Add(this.LblTp);
@@ -237,10 +249,11 @@
         private System.Windows.Forms.NumericUpDown NUDTpZ;
         private System.Windows.Forms.NumericUpDown NUDTpY;
         private System.Windows.Forms.NumericUpDown NUDTpX;
-        private System.Windows.Forms.ComboBox CmbClimateType;
-        private System.Windows.Forms.Label LblClimateType;
         private System.Windows.Forms.Label LblSceneDescription;
         private System.Windows.Forms.ListBox ListScenes;
         private System.Windows.Forms.Label LblTp;
+        private System.Windows.Forms.RadioButton RbListCutScene;
+        private System.Windows.Forms.Button BtnFreezeTime;
+        private System.Windows.Forms.Label LblClearFilter;
     }
 }

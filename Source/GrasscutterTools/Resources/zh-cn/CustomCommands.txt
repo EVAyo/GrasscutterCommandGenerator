@@ -6,6 +6,8 @@
 /prop ue on
 冒险等阶升60级
 /give 102 x1880200
+尘歌壶信任值升到10级
+/give 121 x10900
 设置世界等级8
 /prop wl 8
 点亮地图
@@ -68,3 +70,13 @@
 /unlockall
 无CD
 /setstats cdr 100%
+全皮肤
+/give 340000|/give 340001|/give 340002|/give 340003|/give 340004|/give 340005|/give 340006|/give 340007|/give 340008|/give 340009|/give 340010|/give 340011|/give 340012|/give 340013
+月卡
+/give 1202 x999
+排故信息
+/troubleshoot
+风之翼
+/prop fly on
+芜湖~起飞！
+/tp ~ ~100 ~

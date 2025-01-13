@@ -1,0 +1,63 @@
+﻿A007:Beginners' wish
+A008:Wanderlust Invocation
+A009:Ballad in Goblets
+A010:Dawn Pilgrimage
+A011:Grace of Southwind
+A012:Bane of All Evil
+A013:Epitome Invocation
+A015:Sparkling Steps
+A016:Beginners' wish
+A017:Wanderlust Invocation
+A018:Sparkling Steps
+A019:Ballad in Goblets
+A020:Epitome Invocation
+A021:Epitome Invocation
+A022:Wanderlust Invocation
+A023:Farewell of Snezhnaya
+A024:Gentry of Hermitage
+A027:Secretum Secretorum
+A028:Adrift in the Harbor
+A031:Invitation to Mundane Life
+A032:Dance of Lanterns
+A033:Moment of Bloom
+A036:Ballad in Goblets
+A037:Farewell of Snezhnaya
+A040:Gentry of Hermitage
+A041:Born of Ocean Swell
+A045:Leaves in the Wind
+A048:The Heron's Court
+A049:Tapestry of Golden Flames
+A052:Reign of Serenity
+A053:Drifting Luminescence
+A061:Oni's Royale
+A065:The Transcendent One Returns
+A071:Everbloom Violet
+A076:Azure Excursion
+A081:Discerner of Enigmas
+A091:Viridescent Vigil
+A097:Twilight Arbiter
+A0100:Twirling Lotus
+A0103:The Moongrass' Enlightenment
+A0109:From Ashes Reborn
+A0115:Caution in Confidence
+A0121:Auric Blaze
+A0130:Immaculate Pulse
+A0145:Conjuring Chiaroscuro
+A0151:Decree of the Deeps
+A0154:Tempestuous Destiny
+A0157:Chanson of Many Waters
+A0163:In the Name of the Rosula
+A0169:The Crane Soars Skyward
+A0175:Of Silken Clouds Woven
+A0181:The Hearth's Ashen Shadow
+A0187:Illuminating Lightning
+A0190:Romaritime Meluserenity
+A0196:Ambrosial Essence
+A0199:Sharktacular Surfari
+A0202:Seeker of Flame-Wrought Secrets
+A0205:Forgefire's Blessing
+A0211:Piercing Shot's Crimson Wake
+A0217:Ancient Flame Ablaze
+A0218:Starry Night's Whispers
+B001:Ode to the Dawn Breeze
+B002:Remembrance of Jade and Stone

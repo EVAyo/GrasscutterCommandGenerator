@@ -8,7 +8,7 @@ using GrasscutterTools.Properties;
 
 namespace GrasscutterTools.Utils
 {
-    public static class UIUtil
+    internal static class UIUtil
     {
         /// <summary>
         /// 播放按钮完成动画
@@ -45,7 +45,6 @@ namespace GrasscutterTools.Utils
             }
             listBox.EndUpdate();
         }
-
 
         private static bool Contains(string source, string filter)
         {

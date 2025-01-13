@@ -126,10 +126,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BtnExportCustomCommands.Location" type="System.Drawing.Point, System.Drawing">
-    <value>590, 209</value>
+    <value>593, 206</value>
   </data>
   <data name="BtnExportCustomCommands.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
+    <value>50, 30</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BtnExportCustomCommands.TabIndex" type="System.Int32, mscorlib">
@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnExportCustomCommands.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="BtnLoadCustomCommands.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -157,10 +157,10 @@
     <value>NoControl</value>
   </data>
   <data name="BtnLoadCustomCommands.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 209</value>
+    <value>537, 206</value>
   </data>
   <data name="BtnLoadCustomCommands.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
+    <value>50, 30</value>
   </data>
   <data name="BtnLoadCustomCommands.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -178,7 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnLoadCustomCommands.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="LblCustomName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -190,7 +190,7 @@
     <value>NoControl</value>
   </data>
   <data name="LblCustomName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 212</value>
+    <value>3, 213</value>
   </data>
   <data name="LblCustomName.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 17</value>
@@ -211,7 +211,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblCustomName.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="GrpCustomCommands.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -255,11 +255,14 @@
   <data name="FLPCustomCommands.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="FLPCustomCommands.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 11pt</value>
+  </data>
   <data name="FLPCustomCommands.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 19</value>
   </data>
   <data name="FLPCustomCommands.Size" type="System.Drawing.Size, System.Drawing">
-    <value>634, 174</value>
+    <value>634, 178</value>
   </data>
   <data name="FLPCustomCommands.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -277,10 +280,10 @@
     <value>1</value>
   </data>
   <data name="GrpCustomCommands.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 7</value>
+    <value>3, 3</value>
   </data>
   <data name="GrpCustomCommands.Size" type="System.Drawing.Size, System.Drawing">
-    <value>640, 196</value>
+    <value>640, 200</value>
   </data>
   <data name="GrpCustomCommands.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -298,7 +301,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GrpCustomCommands.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="BtnRemoveCustomCommand.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -307,10 +310,10 @@
     <value>NoControl</value>
   </data>
   <data name="BtnRemoveCustomCommand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 209</value>
+    <value>471, 206</value>
   </data>
   <data name="BtnRemoveCustomCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 23</value>
+    <value>60, 30</value>
   </data>
   <data name="BtnRemoveCustomCommand.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -328,7 +331,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnRemoveCustomCommand.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="BtnSaveCustomCommand.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -337,10 +340,10 @@
     <value>NoControl</value>
   </data>
   <data name="BtnSaveCustomCommand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 209</value>
+    <value>405, 206</value>
   </data>
   <data name="BtnSaveCustomCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 23</value>
+    <value>60, 30</value>
   </data>
   <data name="BtnSaveCustomCommand.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -358,16 +361,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BtnSaveCustomCommand.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="TxtCustomName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
   <data name="TxtCustomName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 209</value>
+    <value>41, 210</value>
   </data>
   <data name="TxtCustomName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 23</value>
+    <value>277, 23</value>
   </data>
   <data name="TxtCustomName.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -382,7 +385,70 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TxtCustomName.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
+  </data>
+  <data name="BtnAddHotKey.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="BtnAddHotKey.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 206</value>
+  </data>
+  <data name="BtnAddHotKey.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
+  <data name="BtnAddHotKey.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="BtnAddHotKey.Text" xml:space="preserve">
+    <value>快捷键</value>
+  </data>
+  <data name="&gt;&gt;BtnAddHotKey.Name" xml:space="preserve">
+    <value>BtnAddHotKey</value>
+  </data>
+  <data name="&gt;&gt;BtnAddHotKey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnAddHotKey.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnAddHotKey.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LblClearFilter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="LblClearFilter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LblClearFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LblClearFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 213</value>
+  </data>
+  <data name="LblClearFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 17</value>
+  </data>
+  <data name="LblClearFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="LblClearFilter.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="LblClearFilter.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LblClearFilter.Name" xml:space="preserve">
+    <value>LblClearFilter</value>
+  </data>
+  <data name="&gt;&gt;LblClearFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblClearFilter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LblClearFilter.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -394,6 +460,6 @@
     <value>PageCustomCommands</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>GrasscutterTools.Pages.BasePage, GrasscutterTools, Version=1.7.4.0, Culture=neutral, PublicKeyToken=de2b1c089621e923</value>
+    <value>GrasscutterTools.Pages.BasePage, GrasscutterTools, Version=1.13.0.0, Culture=neutral, PublicKeyToken=de2b1c089621e923</value>
   </data>
 </root>

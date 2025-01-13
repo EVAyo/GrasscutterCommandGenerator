@@ -181,8 +181,8 @@
   <data name="Error" xml:space="preserve">
     <value>Ошибка</value>
   </data>
-  <data name="GachaBennerPrefab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ru-ru\GachaBennerPrefab.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="GachaBannerPrefab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ru-ru\GachaBannerPrefab.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="Help" xml:space="preserve">
     <value>Помощь</value>
@@ -273,10 +273,109 @@
   <data name="ShopJsonOverrideWarning" xml:space="preserve">
     <value>Разрешено сохранять только в формате Shop.json! Вы уверены, что хотите перезаписать текущий файл?</value>
   </data>
-  <data name="GachaBennerTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ru-ru\GachaBennerTitle.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="GachaBannerTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ru-ru\GachaBannerTitle.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="Dungeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ru-ru\Dungeon.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="TaskRunningCannotOperated" xml:space="preserve">
+    <value>Задача уже запущена и не может быть выполнена</value>
+  </data>
+  <data name="PageAboutTitle" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="PageAvatarTitle" xml:space="preserve">
+    <value>Персонаж</value>
+  </data>
+  <data name="PageCustomCommandsTitle" xml:space="preserve">
+    <value>Кастомное</value>
+  </data>
+  <data name="PageGetArtifactTitle" xml:space="preserve">
+    <value>Артефакт</value>
+  </data>
+  <data name="PageGiveItemTitle" xml:space="preserve">
+    <value>Предметы</value>
+  </data>
+  <data name="PageGiveWeaponTitle" xml:space="preserve">
+    <value>Оружие</value>
+  </data>
+  <data name="PageHomeTitle" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="PageMailTitle" xml:space="preserve">
+    <value>Почта</value>
+  </data>
+  <data name="PageManagementTitle" xml:space="preserve">
+    <value>Аккаунты</value>
+  </data>
+  <data name="PageOpenCommandTitle" xml:space="preserve">
+    <value>OpenCommand</value>
+  </data>
+  <data name="PageQuestTitle" xml:space="preserve">
+    <value>Квест</value>
+  </data>
+  <data name="PageSceneTitle" xml:space="preserve">
+    <value>Сцена</value>
+  </data>
+  <data name="PageSpawnTitle" xml:space="preserve">
+    <value>Спавн</value>
+  </data>
+  <data name="PageTasksTitle" xml:space="preserve">
+    <value>Циклы</value>
+  </data>
+  <data name="Achievement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ru-ru\Achievement.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SelectAnyItem" xml:space="preserve">
+    <value>Сначала выберите любой элемент</value>
+  </data>
+  <data name="PageAchievementTitle" xml:space="preserve">
+    <value>Достижение</value>
+  </data>
+  <data name="PageSetPropTitle" xml:space="preserve">
+    <value>Свойство</value>
+  </data>
+  <data name="PlayerProperty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ru-ru\PlayerProperty.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Cutscene" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ru-ru\Cutscene.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;gb2312</value>
+  </data>
+  <data name="Activity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ru-ru\Activity.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PageHotKey" xml:space="preserve">
+    <value>Горячая клавиша</value>
+  </data>
+  <data name="Gadget" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ru-ru\Gadget.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="StartProxy" xml:space="preserve">
+    <value>Запустить прокси</value>
+  </data>
+  <data name="StopProxy" xml:space="preserve">
+    <value>Остановить прокси</value>
+  </data>
+  <data name="PageSceneTagTitle" xml:space="preserve">
+    <value>Тег сцены</value>
+  </data>
+  <data name="TrustedBeforeContinuing" xml:space="preserve">
+    <value>Прежде чем продолжить, необходимо доверять корневому сертификату!</value>
+  </data>
+  <data name="PageProxyTitle" xml:space="preserve">
+    <value>Прокси</value>
+  </data>
+  <data name="PageSettingsTitle" xml:space="preserve">
+    <value>Настройка</value>
+  </data>
+  <data name="PageWeatherTitle" xml:space="preserve">
+    <value>Погода</value>
+  </data>
+  <data name="Weather" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en-us\Weather.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

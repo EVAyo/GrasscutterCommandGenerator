@@ -178,8 +178,8 @@
   <data name="Error" xml:space="preserve">
     <value>错误</value>
   </data>
-  <data name="GachaBennerPrefab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zh-cn\GachaBennerPrefab.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="GachaBannerPrefab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zh-cn\GachaBannerPrefab.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="SettingSaveError" xml:space="preserve">
     <value>保存设置时异常：</value>
@@ -302,5 +302,104 @@
   </data>
   <data name="Dungeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zh-cn\Dungeon.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="TaskRunningCannotOperated" xml:space="preserve">
+    <value>任务已经启动，无法操作</value>
+  </data>
+  <data name="PageAboutTitle" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="PageAvatarTitle" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="PageCustomCommandsTitle" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="PageGetArtifactTitle" xml:space="preserve">
+    <value>圣遗物</value>
+  </data>
+  <data name="PageGiveItemTitle" xml:space="preserve">
+    <value>物品</value>
+  </data>
+  <data name="PageGiveWeaponTitle" xml:space="preserve">
+    <value>武器</value>
+  </data>
+  <data name="PageHomeTitle" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="PageMailTitle" xml:space="preserve">
+    <value>邮件</value>
+  </data>
+  <data name="PageManagementTitle" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="PageOpenCommandTitle" xml:space="preserve">
+    <value>远程</value>
+  </data>
+  <data name="PageQuestTitle" xml:space="preserve">
+    <value>任务</value>
+  </data>
+  <data name="PageSceneTitle" xml:space="preserve">
+    <value>场景</value>
+  </data>
+  <data name="PageSpawnTitle" xml:space="preserve">
+    <value>生成</value>
+  </data>
+  <data name="PageTasksTitle" xml:space="preserve">
+    <value>循环</value>
+  </data>
+  <data name="Achievement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zh-cn\Achievement.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SelectAnyItem" xml:space="preserve">
+    <value>请先选中任意项！</value>
+  </data>
+  <data name="PageAchievementTitle" xml:space="preserve">
+    <value>成就</value>
+  </data>
+  <data name="Activity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zh-cn\Activity.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PlayerProperty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zh-cn\PlayerProperty.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PageSetPropTitle" xml:space="preserve">
+    <value>属性</value>
+  </data>
+  <data name="Cutscene" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zh-cn\Cutscene.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PageHotKey" xml:space="preserve">
+    <value>快捷键</value>
+  </data>
+  <data name="StartProxy" xml:space="preserve">
+    <value>启动代理</value>
+  </data>
+  <data name="StopProxy" xml:space="preserve">
+    <value>关闭代理</value>
+  </data>
+  <data name="SceneTag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SceneTag.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PageSceneTagTitle" xml:space="preserve">
+    <value>场景项</value>
+  </data>
+  <data name="TrustedBeforeContinuing" xml:space="preserve">
+    <value>必须先信任根证书才能继续！</value>
+  </data>
+  <data name="PageProxyTitle" xml:space="preserve">
+    <value>代理</value>
+  </data>
+  <data name="PageSettingsTitle" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Weather" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zh-cn\Weather.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PageWeatherTitle" xml:space="preserve">
+    <value>天气</value>
   </data>
 </root>

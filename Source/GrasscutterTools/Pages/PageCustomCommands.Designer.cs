@@ -38,6 +38,8 @@
             this.BtnRemoveCustomCommand = new System.Windows.Forms.Button();
             this.BtnSaveCustomCommand = new System.Windows.Forms.Button();
             this.TxtCustomName = new System.Windows.Forms.TextBox();
+            this.BtnAddHotKey = new System.Windows.Forms.Button();
+            this.LblClearFilter = new System.Windows.Forms.Label();
             this.GrpCustomCommands.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,12 +100,30 @@
             // 
             resources.ApplyResources(this.TxtCustomName, "TxtCustomName");
             this.TxtCustomName.Name = "TxtCustomName";
+            this.TxtCustomName.TextChanged += new System.EventHandler(this.TxtCustomName_TextChanged);
             this.TxtCustomName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCustomName_KeyDown);
+            // 
+            // BtnAddHotKey
+            // 
+            resources.ApplyResources(this.BtnAddHotKey, "BtnAddHotKey");
+            this.BtnAddHotKey.Name = "BtnAddHotKey";
+            this.BtnAddHotKey.UseVisualStyleBackColor = true;
+            this.BtnAddHotKey.Click += new System.EventHandler(this.BtnAddHotKey_Click);
+            // 
+            // LblClearFilter
+            // 
+            resources.ApplyResources(this.LblClearFilter, "LblClearFilter");
+            this.LblClearFilter.BackColor = System.Drawing.Color.White;
+            this.LblClearFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblClearFilter.Name = "LblClearFilter";
+            this.LblClearFilter.Click += new System.EventHandler(this.LblClearFilter_Click);
             // 
             // PageCustomCommands
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LblClearFilter);
+            this.Controls.Add(this.BtnAddHotKey);
             this.Controls.Add(this.BtnExportCustomCommands);
             this.Controls.Add(this.BtnLoadCustomCommands);
             this.Controls.Add(this.LblCustomName);
@@ -130,5 +150,7 @@
         private System.Windows.Forms.Button BtnRemoveCustomCommand;
         private System.Windows.Forms.Button BtnSaveCustomCommand;
         private System.Windows.Forms.TextBox TxtCustomName;
+        private System.Windows.Forms.Button BtnAddHotKey;
+        private System.Windows.Forms.Label LblClearFilter;
     }
 }

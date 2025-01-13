@@ -17,6 +17,7 @@
  *
  **/
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,21 +26,26 @@ using Newtonsoft.Json;
 
 namespace GrasscutterTools.Game
 {
-    public class TextMapData
+    internal class TextMapData
     {
         public TextMapData(string resourcesDirPath)
         {
             LoadManualTextMap(Path.Combine(resourcesDirPath, "ExcelBinOutput", "ManualTextMapConfigData.json"));
             LoadTextMaps(Path.Combine(resourcesDirPath, "TextMap"));
+            LoadTextMap(TextMapFilePaths[Array.IndexOf(TextMapFiles, "TextMapCHS")]);
+            DefaultTextMap = TextMap;
         }
 
         public Dictionary<string, string> ManualTextMap;
+        public Dictionary<string, string> DefaultTextMap;
         public Dictionary<string, string> TextMap;
         public string[] TextMapFilePaths;
         public string[] TextMapFiles;
 
         private void LoadManualTextMap(string manualTextMapPath)
         {
+            if (!File.Exists(manualTextMapPath)) return;
+
             using (var fs = File.OpenRead(manualTextMapPath))
             using (var sr = new StreamReader(fs))
             using (var reader = new JsonTextReader(sr))
@@ -80,6 +86,32 @@ namespace GrasscutterTools.Game
                     }
                 }
             }
+        }
+
+        public bool Contains(string textMapPath) => TextMap.ContainsKey(textMapPath) || DefaultTextMap.ContainsKey(textMapPath);
+
+        public string GetText(string textMapHash)
+        {
+            return TextMap.TryGetValue(textMapHash, out var text) ? text
+                : DefaultTextMap.TryGetValue(textMapHash, out text) ? "[CHS] - " + text
+                : "[N/A] " + textMapHash;
+        }
+
+        public bool TryGetText(string textMapHash, out string text)
+        {
+            if (TextMap.TryGetValue(textMapHash, out text))
+            {
+                return true;
+            }
+
+            if (DefaultTextMap.TryGetValue(textMapHash, out text))
+            {
+                text = "[CHS] - " + text;
+                return true;
+            }
+
+            text = "[N/A] " + textMapHash;
+            return false;
         }
     }
 }

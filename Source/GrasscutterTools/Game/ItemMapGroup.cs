@@ -25,7 +25,7 @@ namespace GrasscutterTools.Game
     /// <summary>
     /// ID映射组，Key为分类，双斜杠构造
     /// </summary>
-    public class ItemMapGroup : Dictionary<string, ItemMap>
+    internal class ItemMapGroup : Dictionary<string, ItemMap>
     {
         public ItemMapGroup(string idNamePairs)
         {
@@ -38,7 +38,7 @@ namespace GrasscutterTools.Game
                 if (categoryLineEndIndex == -1)
                     break;
 
-                var category = idNamePairs.Substring(categoryLineStartIndex + 2, categoryLineEndIndex - categoryLineStartIndex - 3).Trim();
+                var category = idNamePairs.Substring(categoryLineStartIndex + 2, categoryLineEndIndex - categoryLineStartIndex - 2).Trim();
 
                 var nextStartIndex = idNamePairs.IndexOf("//", categoryLineEndIndex);
                 if (nextStartIndex == -1)
@@ -63,5 +63,27 @@ namespace GrasscutterTools.Game
         /// 获取所有行
         /// </summary>
         public IEnumerable<string> AllLines => Values.SelectMany(it => it.Lines);
+
+        /// <summary>
+        /// 获取所有ID
+        /// </summary>
+        public IEnumerable<int> AllIds => Values.SelectMany(it => it.Ids);
+
+        private string[] lines;
+        public string[] Lines => lines ??= AllLines.ToArray();
+
+        public string this[int id]
+        {
+            get
+            {
+                foreach (var map in Values)
+                {
+                    var n = map[id];
+                    if (n != ItemMap.EmptyName)
+                        return n;
+                }
+                return ItemMap.EmptyName;
+            }
+        }
     }
 }

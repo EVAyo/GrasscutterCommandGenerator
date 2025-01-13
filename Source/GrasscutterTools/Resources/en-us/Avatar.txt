@@ -1,8 +1,8 @@
-1002:Kamisato Ayaka
+﻿1002:Kamisato Ayaka
 1003:Jean
-1005:Aether
+1005:Male Character
 1006:Lisa
-1007:Lumine
+1007:Female Lead
 1014:Barbara
 1015:Kaeya
 1016:Diluc
@@ -58,3 +58,38 @@
 1072:Candace
 1073:Nahida
 1074:Layla
+1075:Wanderer
+1077:Yaoyao
+1078:Alhaitham
+1079:Dehya
+1080:Mika
+1081:Kaveh
+1082:Baizhu
+1076:Faruzan
+1061:Kirara
+1083:Lynette
+1084:Lyney
+1085:Freminet
+1086:Wriothesley
+1087:Neuvillette
+1088:Charlotte
+1089:Furina
+1090:Chevreuse
+1091:Navia
+1092:Gaming
+1093:Xianyun
+1094:Chiori
+1095:Sigewinne
+1097:Sethos
+1096:Arlecchino
+1098:Clorinde
+1099:Emilie
+4100:Kachina
+4101:Kinich
+4102:Mualani
+4103:Xilonen
+4104:Chasca
+4105:Ororon
+4106:Mavuika
+4107:Citlali
+4108:Lan Yan

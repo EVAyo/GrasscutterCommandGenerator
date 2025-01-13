@@ -38,6 +38,246 @@
 21544:Dreaming Steelbloom
 21553:The Sunken Years
 21554:The Sunken Years
+27412:Defender of the Enchanting Dream
+27413:Defender of the Enchanting Dream
+27422:End of the Golden Realm
+27423:End of the Golden Realm
+27432:Legacy of the Desert High-Born
+27433:Legacy of the Desert High-Born
+27442:The First Days of the City of Kings
+27443:The First Days of the City of Kings
+27452:Timepiece of the Lost Path
+27453:Timepiece of the Lost Path
+27513:Defender of the Enchanting Dream
+27514:Defender of the Enchanting Dream
+27523:End of the Golden Realm
+27524:End of the Golden Realm
+27533:Legacy of the Desert High-Born
+27534:Legacy of the Desert High-Born
+27543:The First Days of the City of Kings
+27544:The First Days of the City of Kings
+27553:Timepiece of the Lost Path
+27554:Timepiece of the Lost Path
+28412:Secret-Keeper's Magic Bottle
+28413:Secret-Keeper's Magic Bottle
+28422:Wilting Feast
+28423:Wilting Feast
+28432:Amethyst Crown
+28433:Amethyst Crown
+28442:Ay-Khanoum's Myriad
+28443:Ay-Khanoum's Myriad
+28452:A Moment Congealed
+28453:A Moment Congealed
+28513:Secret-Keeper's Magic Bottle
+28514:Secret-Keeper's Magic Bottle
+28523:Wilting Feast
+28524:Wilting Feast
+28533:Amethyst Crown
+28534:Amethyst Crown
+28543:Ay-Khanoum's Myriad
+28544:Ay-Khanoum's Myriad
+28553:A Moment Congealed
+28554:A Moment Congealed
+29412:Heroes' Tea Party
+29413:Heroes' Tea Party
+29422:Wicked Mage's Plumule
+29423:Wicked Mage's Plumule
+29432:Fell Dragon's Monocle
+29433:Fell Dragon's Monocle
+29442:Odyssean Flower
+29443:Odyssean Flower
+29452:Nymph's Constancy
+29453:Nymph's Constancy
+29513:Heroes' Tea Party
+29514:Heroes' Tea Party
+29523:Wicked Mage's Plumule
+29524:Wicked Mage's Plumule
+29533:Fell Dragon's Monocle
+29534:Fell Dragon's Monocle
+29543:Odyssean Flower
+29544:Odyssean Flower
+29553:Nymph's Constancy
+29554:Nymph's Constancy
+30412:Feast of Boundless Joy
+30413:Feast of Boundless Joy
+30422:Vibrant Pinion
+30423:Vibrant Pinion
+30432:Heart of Khvarena's Brilliance
+30433:Heart of Khvarena's Brilliance
+30442:Stamen of Khvarena's Origin
+30443:Stamen of Khvarena's Origin
+30452:Ancient Abscission
+30453:Ancient Abscission
+30513:Feast of Boundless Joy
+30514:Feast of Boundless Joy
+30523:Vibrant Pinion
+30524:Vibrant Pinion
+30533:Heart of Khvarena's Brilliance
+30534:Heart of Khvarena's Brilliance
+30543:Stamen of Khvarena's Origin
+30544:Stamen of Khvarena's Origin
+30553:Ancient Abscission
+30554:Ancient Abscission
+31412:Forgotten Vessel
+31413:Forgotten Vessel
+31422:Masterpiece's Overture
+31423:Masterpiece's Overture
+31432:Veteran's Visage
+31433:Veteran's Visage
+31442:Hunter's Brooch
+31443:Hunter's Brooch
+31452:Moment of Judgment
+31453:Moment of Judgment
+31513:Forgotten Vessel
+31514:Forgotten Vessel
+31523:Masterpiece's Overture
+31524:Masterpiece's Overture
+31533:Veteran's Visage
+31534:Veteran's Visage
+31543:Hunter's Brooch
+31544:Hunter's Brooch
+31553:Moment of Judgment
+31554:Moment of Judgment
+32412:Golden Night's Bustle
+32413:Golden Night's Bustle
+32422:Golden Bird's Shedding
+32423:Golden Bird's Shedding
+32432:Golden Troupe's Reward
+32433:Golden Troupe's Reward
+32442:Golden Song's Variation
+32443:Golden Song's Variation
+32452:Golden Era's Prelude
+32453:Golden Era's Prelude
+32513:Golden Night's Bustle
+32514:Golden Night's Bustle
+32523:Golden Bird's Shedding
+32524:Golden Bird's Shedding
+32533:Golden Troupe's Reward
+32534:Golden Troupe's Reward
+32543:Golden Song's Variation
+32544:Golden Song's Variation
+32553:Golden Era's Prelude
+32554:Golden Era's Prelude
+33412:Promised Dream of Days Past
+33413:Promised Dream of Days Past
+33422:Recollection of Days Past
+33423:Recollection of Days Past
+33432:Poetry of Days Past
+33433:Poetry of Days Past
+33442:Forgotten Oath of Days Past
+33443:Forgotten Oath of Days Past
+33452:Echoing Sound From Days Past
+33453:Echoing Sound From Days Past
+33513:Promised Dream of Days Past
+33514:Promised Dream of Days Past
+33523:Recollection of Days Past
+33524:Recollection of Days Past
+33533:Poetry of Days Past
+33534:Poetry of Days Past
+33543:Forgotten Oath of Days Past
+33544:Forgotten Oath of Days Past
+33553:Echoing Sound From Days Past
+33554:Echoing Sound From Days Past
+34412:Magnanimous Ink Bottle
+34413:Magnanimous Ink Bottle
+34422:Honest Quill
+34423:Honest Quill
+34432:Compassionate Ladies' Hat
+34433:Compassionate Ladies' Hat
+34442:Selfless Floral Accessory
+34443:Selfless Floral Accessory
+34452:Faithful Hourglass
+34453:Faithful Hourglass
+34513:Magnanimous Ink Bottle
+34514:Magnanimous Ink Bottle
+34523:Honest Quill
+34524:Honest Quill
+34533:Compassionate Ladies' Hat
+34534:Compassionate Ladies' Hat
+34543:Selfless Floral Accessory
+34544:Selfless Floral Accessory
+34553:Faithful Hourglass
+34554:Faithful Hourglass
+35412:Ichor Shower Rhapsody
+35413:Ichor Shower Rhapsody
+35422:Ancient Sea's Nocturnal Musing
+35423:Ancient Sea's Nocturnal Musing
+35432:Whimsical Dance of the Withered
+35433:Whimsical Dance of the Withered
+35442:Harmonious Symphony Prelude
+35443:Harmonious Symphony Prelude
+35452:The Grand Jape of the Turning of Fate
+35453:The Grand Jape of the Turning of Fate
+35513:Ichor Shower Rhapsody
+35514:Ichor Shower Rhapsody
+35523:Ancient Sea's Nocturnal Musing
+35524:Ancient Sea's Nocturnal Musing
+35533:Whimsical Dance of the Withered
+35534:Whimsical Dance of the Withered
+35543:Harmonious Symphony Prelude
+35544:Harmonious Symphony Prelude
+35553:The Grand Jape of the Turning of Fate
+35554:The Grand Jape of the Turning of Fate
+36412:The Wine-Flask Over Which the Plan Was Hatched
+36413:The Wine-Flask Over Which the Plan Was Hatched
+36422:Faded Emerald Tail
+36423:Faded Emerald Tail
+36432:Crownless Crown
+36433:Crownless Crown
+36442:Dark Fruit of Bright Flowers
+36443:Dark Fruit of Bright Flowers
+36452:Moment of Attainment
+36453:Moment of Attainment
+36513:The Wine-Flask Over Which the Plan Was Hatched
+36514:The Wine-Flask Over Which the Plan Was Hatched
+36523:Faded Emerald Tail
+36524:Faded Emerald Tail
+36533:Crownless Crown
+36534:Crownless Crown
+36543:Dark Fruit of Bright Flowers
+36544:Dark Fruit of Bright Flowers
+36553:Moment of Attainment
+36554:Moment of Attainment
+37412:Wandering Scholar's Claw Cup
+37413:Wandering Scholar's Claw Cup
+37422:Mountain Ranger's Marker
+37423:Mountain Ranger's Marker
+37432:Demon-Warrior's Feather Mask
+37433:Demon-Warrior's Feather Mask
+37442:Beast Tamer's Talisman
+37443:Beast Tamer's Talisman
+37452:Mystic's Gold Dial
+37453:Mystic's Gold Dial
+37513:Wandering Scholar's Claw Cup
+37514:Wandering Scholar's Claw Cup
+37523:Mountain Ranger's Marker
+37524:Mountain Ranger's Marker
+37533:Demon-Warrior's Feather Mask
+37534:Demon-Warrior's Feather Mask
+37543:Beast Tamer's Talisman
+37544:Beast Tamer's Talisman
+37553:Mystic's Gold Dial
+37554:Mystic's Gold Dial
+38412:Pre-Banquet of the Contenders
+38413:Pre-Banquet of the Contenders
+38422:Root of the Spirit-Marrow
+38423:Root of the Spirit-Marrow
+38432:Crown of the Saints
+38433:Crown of the Saints
+38442:Reckoning of the Xenogenic
+38443:Reckoning of the Xenogenic
+38452:Myths of the Night Realm
+38453:Myths of the Night Realm
+38513:Pre-Banquet of the Contenders
+38514:Pre-Banquet of the Contenders
+38523:Root of the Spirit-Marrow
+38524:Root of the Spirit-Marrow
+38533:Crown of the Saints
+38534:Crown of the Saints
+38543:Reckoning of the Xenogenic
+38544:Reckoning of the Xenogenic
+38553:Myths of the Night Realm
+38554:Myths of the Night Realm
 51110:Goblet of the Sojourner
 51111:Goblet of the Sojourner
 51112:Goblet of the Sojourner
@@ -1794,10 +2034,10 @@
 74313:Maiden's Fleeting Leisure
 74314:Maiden's Fleeting Leisure
 74320:Maiden's Heart-stricken Infatuation
-74321:Maiden's Heart-stricken Infatuation
-74322:Maiden's Heart-stricken Infatuation
-74323:Maiden's Heart-stricken Infatuation
-74324:Maiden's Heart-stricken Infatuation
+74321:Maiden's Heart-Stricken Infatuation
+74322:Maiden's Heart-Stricken Infatuation
+74323:Maiden's Heart-Stricken Infatuation
+74324:Maiden's Heart-Stricken Infatuation
 74330:Maiden's Fading Beauty
 74331:Maiden's Fading Beauty
 74332:Maiden's Fading Beauty
@@ -1818,11 +2058,11 @@
 74412:Maiden's Fleeting Leisure
 74413:Maiden's Fleeting Leisure
 74414:Maiden's Fleeting Leisure
-74420:Maiden's Heart-stricken Infatuation
-74421:Maiden's Heart-stricken Infatuation
-74422:Maiden's Heart-stricken Infatuation
-74423:Maiden's Heart-stricken Infatuation
-74424:Maiden's Heart-stricken Infatuation
+74420:Maiden's Heart-Stricken Infatuation
+74421:Maiden's Heart-Stricken Infatuation
+74422:Maiden's Heart-Stricken Infatuation
+74423:Maiden's Heart-Stricken Infatuation
+74424:Maiden's Heart-Stricken Infatuation
 74430:Maiden's Fading Beauty
 74431:Maiden's Fading Beauty
 74432:Maiden's Fading Beauty
@@ -1843,11 +2083,11 @@
 74512:Maiden's Fleeting Leisure
 74513:Maiden's Fleeting Leisure
 74514:Maiden's Fleeting Leisure
-74520:Maiden's Heart-stricken Infatuation
-74521:Maiden's Heart-stricken Infatuation
-74522:Maiden's Heart-stricken Infatuation
-74523:Maiden's Heart-stricken Infatuation
-74524:Maiden's Heart-stricken Infatuation
+74520:Maiden's Heart-Stricken Infatuation
+74521:Maiden's Heart-Stricken Infatuation
+74522:Maiden's Heart-Stricken Infatuation
+74523:Maiden's Heart-Stricken Infatuation
+74524:Maiden's Heart-Stricken Infatuation
 74530:Maiden's Fading Beauty
 74531:Maiden's Fading Beauty
 74532:Maiden's Fading Beauty

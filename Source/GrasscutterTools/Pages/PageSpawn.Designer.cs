@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PageSpawn));
             this.TCSpawnSettings = new System.Windows.Forms.TabControl();
             this.TPSpawnArgs = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ChkNoAggressiveness = new System.Windows.Forms.CheckBox();
             this.NUDEntityDef = new System.Windows.Forms.NumericUpDown();
             this.NUDEntityAtk = new System.Windows.Forms.NumericUpDown();
             this.NUDEntityHp = new System.Windows.Forms.NumericUpDown();
@@ -41,7 +43,6 @@
             this.NUDEntityPosX = new System.Windows.Forms.NumericUpDown();
             this.NUDEntityAmout = new System.Windows.Forms.NumericUpDown();
             this.NUDEntityLevel = new System.Windows.Forms.NumericUpDown();
-            this.LblSpawnVersionRequireTip = new System.Windows.Forms.Label();
             this.LblInfiniteHpTip = new System.Windows.Forms.Label();
             this.LblEntityDef = new System.Windows.Forms.Label();
             this.LblEntityAtk = new System.Windows.Forms.Label();
@@ -89,8 +90,9 @@
             this.TPSpawnItems = new System.Windows.Forms.TabPage();
             this.ListEntity = new System.Windows.Forms.ListBox();
             this.PanelEntityFilterBar = new System.Windows.Forms.Panel();
+            this.LblClearFilter = new System.Windows.Forms.Label();
             this.TxtEntityFilter = new System.Windows.Forms.TextBox();
-            this.BtnFilterEntity = new System.Windows.Forms.Button();
+            this.CmbFilterEntity = new System.Windows.Forms.ComboBox();
             this.TPSpawnRecords = new System.Windows.Forms.TabPage();
             this.ListSpawnLogs = new System.Windows.Forms.ListBox();
             this.FLPSpawnRecordControls = new System.Windows.Forms.FlowLayoutPanel();
@@ -137,6 +139,8 @@
             // 
             // TPSpawnArgs
             // 
+            this.TPSpawnArgs.Controls.Add(this.label1);
+            this.TPSpawnArgs.Controls.Add(this.ChkNoAggressiveness);
             this.TPSpawnArgs.Controls.Add(this.NUDEntityDef);
             this.TPSpawnArgs.Controls.Add(this.NUDEntityAtk);
             this.TPSpawnArgs.Controls.Add(this.NUDEntityHp);
@@ -146,7 +150,6 @@
             this.TPSpawnArgs.Controls.Add(this.NUDEntityPosX);
             this.TPSpawnArgs.Controls.Add(this.NUDEntityAmout);
             this.TPSpawnArgs.Controls.Add(this.NUDEntityLevel);
-            this.TPSpawnArgs.Controls.Add(this.LblSpawnVersionRequireTip);
             this.TPSpawnArgs.Controls.Add(this.LblInfiniteHpTip);
             this.TPSpawnArgs.Controls.Add(this.LblEntityDef);
             this.TPSpawnArgs.Controls.Add(this.LblEntityAtk);
@@ -158,6 +161,18 @@
             resources.ApplyResources(this.TPSpawnArgs, "TPSpawnArgs");
             this.TPSpawnArgs.Name = "TPSpawnArgs";
             this.TPSpawnArgs.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // ChkNoAggressiveness
+            // 
+            resources.ApplyResources(this.ChkNoAggressiveness, "ChkNoAggressiveness");
+            this.ChkNoAggressiveness.Name = "ChkNoAggressiveness";
+            this.ChkNoAggressiveness.UseVisualStyleBackColor = true;
+            this.ChkNoAggressiveness.CheckedChanged += new System.EventHandler(this.SpawnEntityInputChanged);
             // 
             // NUDEntityDef
             // 
@@ -316,7 +331,7 @@
             // 
             resources.ApplyResources(this.NUDEntityLevel, "NUDEntityLevel");
             this.NUDEntityLevel.Maximum = new decimal(new int[] {
-            90,
+            200,
             0,
             0,
             0});
@@ -332,12 +347,6 @@
             0,
             0});
             this.NUDEntityLevel.ValueChanged += new System.EventHandler(this.SpawnEntityInputChanged);
-            // 
-            // LblSpawnVersionRequireTip
-            // 
-            resources.ApplyResources(this.LblSpawnVersionRequireTip, "LblSpawnVersionRequireTip");
-            this.LblSpawnVersionRequireTip.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.LblSpawnVersionRequireTip.Name = "LblSpawnVersionRequireTip";
             // 
             // LblInfiniteHpTip
             // 
@@ -706,10 +715,19 @@
             // 
             // PanelEntityFilterBar
             // 
+            this.PanelEntityFilterBar.Controls.Add(this.LblClearFilter);
             this.PanelEntityFilterBar.Controls.Add(this.TxtEntityFilter);
-            this.PanelEntityFilterBar.Controls.Add(this.BtnFilterEntity);
+            this.PanelEntityFilterBar.Controls.Add(this.CmbFilterEntity);
             resources.ApplyResources(this.PanelEntityFilterBar, "PanelEntityFilterBar");
             this.PanelEntityFilterBar.Name = "PanelEntityFilterBar";
+            // 
+            // LblClearFilter
+            // 
+            resources.ApplyResources(this.LblClearFilter, "LblClearFilter");
+            this.LblClearFilter.BackColor = System.Drawing.Color.White;
+            this.LblClearFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblClearFilter.Name = "LblClearFilter";
+            this.LblClearFilter.Click += new System.EventHandler(this.LblClearFilter_Click);
             // 
             // TxtEntityFilter
             // 
@@ -717,12 +735,12 @@
             this.TxtEntityFilter.Name = "TxtEntityFilter";
             this.TxtEntityFilter.TextChanged += new System.EventHandler(this.TxtEntityFilter_TextChanged);
             // 
-            // BtnFilterEntity
+            // CmbFilterEntity
             // 
-            resources.ApplyResources(this.BtnFilterEntity, "BtnFilterEntity");
-            this.BtnFilterEntity.Name = "BtnFilterEntity";
-            this.BtnFilterEntity.UseVisualStyleBackColor = true;
-            this.BtnFilterEntity.Click += new System.EventHandler(this.BtnFilterEntity_Click);
+            this.CmbFilterEntity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.CmbFilterEntity, "CmbFilterEntity");
+            this.CmbFilterEntity.Name = "CmbFilterEntity";
+            this.CmbFilterEntity.SelectedIndexChanged += new System.EventHandler(this.CmbFilterEntity_SelectedIndexChanged);
             // 
             // TPSpawnRecords
             // 
@@ -830,7 +848,6 @@
         private System.Windows.Forms.NumericUpDown NUDEntityPosX;
         private System.Windows.Forms.NumericUpDown NUDEntityAmout;
         private System.Windows.Forms.NumericUpDown NUDEntityLevel;
-        private System.Windows.Forms.Label LblSpawnVersionRequireTip;
         private System.Windows.Forms.Label LblInfiniteHpTip;
         private System.Windows.Forms.Label LblEntityDef;
         private System.Windows.Forms.Label LblEntityAtk;
@@ -879,7 +896,7 @@
         private System.Windows.Forms.ListBox ListEntity;
         private System.Windows.Forms.Panel PanelEntityFilterBar;
         private System.Windows.Forms.TextBox TxtEntityFilter;
-        private System.Windows.Forms.Button BtnFilterEntity;
+        private System.Windows.Forms.ComboBox CmbFilterEntity;
         private System.Windows.Forms.TabPage TPSpawnRecords;
         private System.Windows.Forms.ListBox ListSpawnLogs;
         private System.Windows.Forms.FlowLayoutPanel FLPSpawnRecordControls;
@@ -887,5 +904,8 @@
         private System.Windows.Forms.Button BtnRemoveSpawnLog;
         private System.Windows.Forms.Label LblClearSpawnLogs;
         private System.Windows.Forms.ContextMenuStrip MenuSpawnEntityFilter;
+        private System.Windows.Forms.CheckBox ChkNoAggressiveness;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblClearFilter;
     }
 }

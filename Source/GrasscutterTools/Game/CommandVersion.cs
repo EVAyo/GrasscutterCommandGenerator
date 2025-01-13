@@ -132,11 +132,56 @@ namespace GrasscutterTools.Game
         /// </summary>
         public static readonly Version V1_4_3 = new Version(1, 4, 3);
 
+        /// <summary>
+        /// 2023/4/1
+        /// </summary>
+        public static readonly Version V1_4_7 = new Version(1, 4, 7);
+
+        /// <summary>
+        /// 2023/4/1
+        /// </summary>
+        public static readonly Version V1_5_0 = new Version(1, 5, 0);
+
+        /// <summary>
+        /// 2023/6/1
+        /// </summary>
+        public static readonly Version V1_6_0 = new Version(1, 6, 0);
+
+        /// <summary>
+        /// 2023/6/2
+        /// </summary>
+        public static readonly Version V1_6_1 = new Version(1, 6, 1);
+
+        /// <summary>
+        /// 2023/7/1
+        /// </summary>
+        public static readonly Version V1_6_2 = new Version(1, 6, 2);
+
+        /// <summary>
+        /// 2023/8/1
+        /// </summary>
+        public static readonly Version V1_6_3 = new Version(1, 6, 3);
+
+        /// <summary>
+        /// 2023/9/1
+        /// </summary>
+        public static readonly Version V1_7_0 = new Version(1, 7, 0);
+
+        /// <summary>
+        /// 2023/9/3
+        /// </summary>
+        public static readonly Version V1_7_1 = new Version(1, 7, 1);
+
+        /// <summary>
+        /// 2023/10/1
+        /// </summary>
+        public static readonly Version V1_7_2 = new Version(1, 7, 2);
+
         // More...
         /// <summary>
         /// Date
         /// </summary>
-        //public static readonly Version V1_4_4 = new Version(1, 4, 4);
+        //public static readonly Version V1_6_3 = new Version(1, 6, 3);
 
         public static Version[] List { get; } = new Version[] {
             V1_2_1,
@@ -148,7 +193,15 @@ namespace GrasscutterTools.Game
             V1_4_1,
             V1_4_2,
             V1_4_3,
-            //V1_4_4,
+            V1_4_7,
+            V1_5_0,
+            V1_6_0,
+            V1_6_1,
+            V1_6_2,
+            V1_6_3,
+            V1_7_0,
+            V1_7_1,
+            V1_7_2,
         };
 
         #endregion - 版本列表 Version List -

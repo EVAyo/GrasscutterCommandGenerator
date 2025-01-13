@@ -20,12 +20,15 @@
 using System;
 
 using GrasscutterTools.Game;
+using GrasscutterTools.Properties;
 using GrasscutterTools.Utils;
 
 namespace GrasscutterTools.Pages
 {
     internal partial class PageGiveWeapon : BasePage
     {
+        public override string Text => Resources.PageGiveWeaponTitle;
+
         public PageGiveWeapon()
         {
             InitializeComponent();
@@ -45,6 +48,15 @@ namespace GrasscutterTools.Pages
         private void TxtWeaponFilter_TextChanged(object sender, EventArgs e)
         {
             UIUtil.ListBoxFilter(ListWeapons, GameData.Weapons.Lines, TxtWeaponFilter.Text);
+            LblClearFilter.Visible = TxtWeaponFilter.Text.Length > 0;
+        }
+
+        /// <summary>
+        /// 点击清空过滤器标签时触发
+        /// </summary>
+        private void LblClearFilter_Click(object sender, EventArgs e)
+        {
+            TxtWeaponFilter.Clear();
         }
 
         /// <summary>
@@ -69,6 +81,11 @@ namespace GrasscutterTools.Pages
         private void BtnGiveAllWeapons_Click(object sender, EventArgs e)
         {
             SetCommand("/give", $"weapons x{NUDWeaponAmout.Value} lv{NUDWeaponLevel.Value} r{NUDWeaponRefinement.Value}");
+        }
+
+        private void ListWeapons_MeasureItem(object sender, System.Windows.Forms.MeasureItemEventArgs e)
+        {
+            e.ItemHeight = ListWeapons.Font.Height * 3 / 2;
         }
     }
 }

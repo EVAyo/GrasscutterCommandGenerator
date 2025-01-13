@@ -24,8 +24,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using GrasscutterTools.DispatchServer;
+using GrasscutterTools.DispatchServer.Model;
 using GrasscutterTools.Game;
 using GrasscutterTools.GOOD;
 using GrasscutterTools.OpenCommand;
@@ -38,10 +38,19 @@ namespace GrasscutterTools.Pages
 {
     internal partial class PageOpenCommand : BasePage
     {
+        public override string Text => Resources.PageOpenCommandTitle;
+
+        private const string TAG = nameof(PageOpenCommand);
+
         public PageOpenCommand()
         {
             InitializeComponent();
             if (DesignMode) return;
+
+            InitServerRecords();
+            if (!string.IsNullOrEmpty(Settings.Default.Host))
+                TxtHost.Items.Add(Settings.Default.Host);
+            TxtHost.Items.AddRange(ServerRecords.Select(it => it.Host).ToArray());
 
             NUDRemotePlayerId.Value = Settings.Default.RemoteUid;
             TxtHost.Text = Settings.Default.Host;
@@ -51,7 +60,67 @@ namespace GrasscutterTools.Pages
                 TxtToken.Text = Settings.Default.TokenCache;
                 Task.Delay(1000).ContinueWith(_ => ShowTipInRunButton?.Invoke(Resources.TokenRestoredFromCache));
             }
+
+            if (string.IsNullOrEmpty(TxtHost.Text))
+            {
+                TxtHost.Items.Add("http://127.0.0.1:443");
+                TxtHost.SelectedIndex = 0;
+            }
         }
+
+        #region - 服务器记录 -
+
+        private class ServerRecord
+        {
+            public string Tag { get; set; }
+            public string Host { get; set; }
+            public int Uid { get; set; }
+            public string Token { get; set; }
+        }
+
+        private readonly string ServerRecordsFilePath = Common.GetAppDataFile("Servers.json");
+        private List<ServerRecord> ServerRecords = new List<ServerRecord>();
+
+        //{
+        //    new ServerRecord
+        //    {
+        //        Host = "http://127.0.0.1:443",
+        //        Tag = "Localhost",
+        //        Token = "123456",
+        //        Uid = 10001,
+        //    }
+        //};
+        private void InitServerRecords()
+        {
+            if (!File.Exists(ServerRecordsFilePath))
+                return;
+
+            try
+            {
+                Logger.I(TAG, "Loading ServerRecords json file from: " + ServerRecordsFilePath);
+                ServerRecords = JsonConvert.DeserializeObject<List<ServerRecord>>(File.ReadAllText(ServerRecordsFilePath));
+            }
+            catch (Exception ex)
+            {
+                Logger.W(TAG, "Parsing Servers.json failed.", ex);
+            }
+        }
+
+        private void SaveServerRecords()
+        {
+            try
+            {
+                if (ServerRecords.Count == 0)
+                    return;
+                File.WriteAllText(ServerRecordsFilePath, JsonConvert.SerializeObject(ServerRecords));
+            }
+            catch (Exception ex)
+            {
+                Logger.W(TAG, "Save all server records failed.", ex);
+            }
+        }
+
+        #endregion - 服务器记录 -
 
         /// <summary>
         /// 在运行按钮上显示提示，要求主窗口设置
@@ -66,7 +135,7 @@ namespace GrasscutterTools.Pages
                 // 自动尝试查询本地服务端地址，降低使用门槛
                 Task.Run(async () =>
                 {
-                    var localhosts = new string[] {
+                    var localhostList = new[] {
                         "http://127.0.0.1:443",
                         "https://127.0.0.1",
                         "http://127.0.0.1",
@@ -74,13 +143,13 @@ namespace GrasscutterTools.Pages
                         "http://127.0.0.1:8080",
                         "https://127.0.0.1:8080",
                     };
-                    foreach (var host in localhosts)
+                    foreach (var host in localhostList)
                     {
                         try
                         {
                             await UpdateServerStatus(host);
                             // 自动填写本地服务端地址
-                            TxtHost.Text = host;
+                            BeginInvoke(new Action(() => TxtHost.Text = host));
                             break;
                         }
                         catch (Exception)
@@ -109,14 +178,17 @@ namespace GrasscutterTools.Pages
         /// <param name="host">主机地址</param>
         private async Task UpdateServerStatus(string host)
         {
-            // "http://127.0.0.1/" -> "http://127.0.0.1"
-            host = host.TrimEnd('/');
             var status = await DispatchServerAPI.QueryServerStatus(host);
-            LblServerVersion.Text = status.Version;
-            if (status.MaxPlayer >= 0)
-                LblPlayerCount.Text = $"{status.PlayerCount}/{status.MaxPlayer}";
+            if (InvokeRequired)
+                BeginInvoke(new Action<ServerStatus>(ShowServerStatus), status);
             else
-                LblPlayerCount.Text = status.PlayerCount.ToString();
+                ShowServerStatus(status);
+        }
+
+        private void ShowServerStatus(ServerStatus status)
+        {
+            LblServerVersion.Text = status.Version;
+            LblPlayerCount.Text = status.MaxPlayer > 0 ? $"{status.PlayerCount}/{status.MaxPlayer}" : status.PlayerCount.ToString();
         }
 
         /// <summary>
@@ -125,6 +197,20 @@ namespace GrasscutterTools.Pages
         private void TxtHost_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) BtnQueryServerStatus_Click(BtnQueryServerStatus, e);
+        }
+
+        /// <summary>
+        /// 地址栏选中项改变时触发
+        /// </summary>
+        private void TxtHost_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TxtHost.SelectedIndex >= 0 && TxtHost.SelectedIndex < ServerRecords.Count)
+            {
+                // 还原记录
+                var record = ServerRecords[TxtHost.SelectedIndex];
+                TxtToken.Text = record.Token;
+                NUDRemotePlayerId.Value = record.Uid;
+            }
         }
 
         /// <summary>
@@ -137,9 +223,11 @@ namespace GrasscutterTools.Pages
             btn.Cursor = Cursors.WaitCursor;
             try
             {
+                // "http://127.0.0.1/" -> "http://127.0.0.1"
+                var host = TxtHost.Text.TrimEnd('/');
                 try
                 {
-                    await UpdateServerStatus(TxtHost.Text);
+                    await UpdateServerStatus(host);
                 }
                 catch (Exception ex)
                 {
@@ -147,8 +235,24 @@ namespace GrasscutterTools.Pages
                     return;
                 }
 
-                Common.OC = new OpenCommandAPI(TxtHost.Text);
-                if (await Common.OC.Ping())
+                Settings.Default.Host = host;
+
+                var isOcEnabled = false;
+                try
+                {
+                    Common.OC = new OpenCommandAPI(host);
+                    isOcEnabled = await Common.OC.Ping();
+                }
+                catch (Exception ex)
+                {
+#if DEBUG
+                    MessageBox.Show(ex.ToString(), Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+#else
+                    MessageBox.Show(ex.Message, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+#endif
+                }
+
+                if (isOcEnabled)
                 {
                     LblOpenCommandSupport.Text = "√";
                     LblOpenCommandSupport.ForeColor = Color.Green;
@@ -237,6 +341,25 @@ namespace GrasscutterTools.Pages
                 GrpRemoteCommand.Enabled = false;
                 ShowTipInRunButton?.Invoke(Resources.ConnectedTip);
                 ButtonOpenGOODImport.Enabled = true;
+
+                var r = ServerRecords.Find(it => it.Host == TxtHost.Text);
+                if (r != null)
+                {
+                    r.Token = Common.OC.Token;
+                    r.Uid = (int)NUDRemotePlayerId.Value;
+                }
+                else
+                {
+                    ServerRecords.Add(new ServerRecord
+                    {
+                        Host = Common.OC.Host,
+                        Tag = "TODO",
+                        Token = Common.OC.Token,
+                        Uid = (int)NUDRemotePlayerId.Value
+                    });
+                    TxtHost.Items.Add(Common.OC.Host);
+                }
+                SaveServerRecords();
             }
             catch (Exception ex)
             {

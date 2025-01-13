@@ -129,10 +129,7 @@
   <data name="BtnOpenGachaBannerEditor.Text" xml:space="preserve">
     <value>獎池編輯器</value>
   </data>
-  <data name="GrpSettings.Text" xml:space="preserve">
-    <value>設置</value>
-  </data>
-  <data name="ChkTopMost.Text" xml:space="preserve">
-    <value>窗口置頂</value>
+  <data name="BtnActivityEditor.Text" xml:space="preserve">
+    <value>活動編輯器</value>
   </data>
 </root>

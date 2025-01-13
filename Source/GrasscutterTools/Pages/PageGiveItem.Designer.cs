@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PageGiveItem));
             this.LblClearGiveItemLogs = new System.Windows.Forms.Label();
             this.BtnSaveGiveItemLog = new System.Windows.Forms.Button();
@@ -42,6 +43,9 @@
             this.NUDGameItemAmout = new System.Windows.Forms.NumericUpDown();
             this.NUDGameItemLevel = new System.Windows.Forms.NumericUpDown();
             this.LblGiveCommandDescription = new System.Windows.Forms.Label();
+            this.CmbFilterItem = new System.Windows.Forms.ComboBox();
+            this.MenuItemFilter = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.LblClearFilter = new System.Windows.Forms.Label();
             this.GrpGiveItemRecord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDGameItemAmout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDGameItemLevel)).BeginInit();
@@ -100,6 +104,7 @@
             resources.ApplyResources(this.ListGameItems, "ListGameItems");
             this.ListGameItems.FormattingEnabled = true;
             this.ListGameItems.Name = "ListGameItems";
+            this.ListGameItems.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.ListGameItems_MeasureItem);
             this.ListGameItems.SelectedIndexChanged += new System.EventHandler(this.GiveItemsInputChanged);
             // 
             // LblGameItemAmount
@@ -159,10 +164,33 @@
             resources.ApplyResources(this.LblGiveCommandDescription, "LblGiveCommandDescription");
             this.LblGiveCommandDescription.Name = "LblGiveCommandDescription";
             // 
+            // CmbFilterItem
+            // 
+            this.CmbFilterItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.CmbFilterItem, "CmbFilterItem");
+            this.CmbFilterItem.Name = "CmbFilterItem";
+            this.CmbFilterItem.SelectedIndexChanged += new System.EventHandler(this.CmbFilterItem_SelectedIndexChanged);
+            // 
+            // MenuItemFilter
+            // 
+            this.MenuItemFilter.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.MenuItemFilter.Name = "MenuSpawnEntityFilter";
+            resources.ApplyResources(this.MenuItemFilter, "MenuItemFilter");
+            // 
+            // LblClearFilter
+            // 
+            resources.ApplyResources(this.LblClearFilter, "LblClearFilter");
+            this.LblClearFilter.BackColor = System.Drawing.Color.White;
+            this.LblClearFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblClearFilter.Name = "LblClearFilter";
+            this.LblClearFilter.Click += new System.EventHandler(this.LblClearFilter_Click);
+            // 
             // PageGiveItem
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LblClearFilter);
+            this.Controls.Add(this.CmbFilterItem);
             this.Controls.Add(this.LblClearGiveItemLogs);
             this.Controls.Add(this.BtnSaveGiveItemLog);
             this.Controls.Add(this.BtnRemoveGiveItemLog);
@@ -199,5 +227,8 @@
         private System.Windows.Forms.NumericUpDown NUDGameItemAmout;
         private System.Windows.Forms.NumericUpDown NUDGameItemLevel;
         private System.Windows.Forms.Label LblGiveCommandDescription;
+        private System.Windows.Forms.ComboBox CmbFilterItem;
+        private System.Windows.Forms.ContextMenuStrip MenuItemFilter;
+        private System.Windows.Forms.Label LblClearFilter;
     }
 }

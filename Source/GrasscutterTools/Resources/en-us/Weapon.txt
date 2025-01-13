@@ -1,4 +1,4 @@
-11101:Dull Blade
+﻿11101:Dull Blade
 11201:Silver Sword
 11301:Cool Steel
 11302:Harbinger of Dawn
@@ -22,20 +22,33 @@
 11415:Cinnabar Spindle
 11416:Kagotsurube Isshin
 11417:Sapwood Blade
-11418:Xiphos’ Moonlight
+11418:Xiphos' Moonlight
 11419:Prized Isshin Blade
 11420:Prized Isshin Blade
 11421:Prized Isshin Blade
+11422:Toukabou Shigure
+11424:Wolf-Fang
+11425:Finale of the Deep
+11426:Fleuve Cendre Ferryman
+11427:The Dockhand's Assistant
+11428:Sword of Narzissenkreuz
+11429:Sword of Narzissenkreuz
+11430:Sturdy Bone
+11431:Flute of Ezpitzal
+11432:Calamity of Eshu
 11501:Aquila Favonia
 11502:Skyward Blade
 11503:Freedom-Sworn
 11504:Summit Shaper
 11505:Primordial Jade Cutter
-11506:Primordial Jade Cutter
-11507:One Side
 11509:Mistsplitter Reforged
 11510:Haran Geppaku Futsu
 11511:Key of Khaj-Nisut
+11512:Light of Foliar Incision
+11513:Splendor of Tranquil Waters
+11514:Uraku Misugiri
+11515:Absolution
+11516:Peak Patrol Song
 12101:Waster Greatsword
 12201:Old Merc's Pal
 12301:Ferrous Shadow
@@ -60,13 +73,22 @@
 12415:Makhaira Aquamarine
 12416:Akuoumaru
 12417:Forest Regalia
+12418:Mailed Flower
+12424:Talking Stick
+12425:Tidal Shadow
+12426:"Ultimate Overlord's Mega Magic Sword"
+12427:Portable Power Saw
+12430:Fruitful Hook
+12431:Earth Shaker
 12501:Skyward Pride
 12502:Wolf's Gravestone
 12503:Song of Broken Pines
 12504:The Unforged
-12505:Primordial Jade Greatsword
-12506:The Other Side
 12510:Redhorn Stonethresher
+12511:Beacon of the Reed Sea
+12512:Verdict
+12513:Fang of the Mountain King
+12514:A Thousand Blazing Suns
 13101:Beginner's Protector
 13201:Iron Point
 13301:White Tassel
@@ -87,14 +109,21 @@
 13416:Wavebreaker's Fin
 13417:Moonpiercer
 13419:Missive Windspear
+13424:Ballad of the Fjords
+13425:Rightful Reward
+13426:Dialogues of the Desert Sages
+13427:Prospector's Drill
+13430:Mountain-Bracing Bolt
+13431:Footprint of the Rainbow
 13501:Staff of Homa
 13502:Skyward Spine
 13504:Vortex Vanquisher
 13505:Primordial Jade Winged-Spear
-13506:Deicide
 13507:Calamity Queller
 13509:Engulfing Lightning
 13511:Staff of the Scarlet Sands
+13512:Crimson Moon's Semblance
+13513:Lumidouce Elegy
 14101:Apprentice's Notes
 14201:Pocket Grimoire
 14301:Magic Guide
@@ -119,14 +148,25 @@
 14415:Oathsworn Eye
 14416:Wandering Evenstar
 14417:Fruit of Fulfillment
+14424:Sacrificial Jade
+14425:Flowing Purity
+14426:Ballad of the Boundless Blue
+14427:Ash-Graven Drinking Horn
+14430:Waveriding Whirl
+14431:Ring of Yaxche
 14501:Skyward Atlas
 14502:Lost Prayer to the Sacred Winds
-14503:Lost Ballade
 14504:Memory of Dust
-14505:Primordial Jade Regalia
+14505:Jadefall's Splendor
 14506:Everlasting Moonglow
 14509:Kagura's Verity
 14511:A Thousand Floating Dreams
+14512:Tulaytullah's Remembrance
+14513:Cashflow Supervision
+14514:Tome of the Eternal Flow
+14515:Crane's Echoing Call
+14516:Surf's Up
+14517:Starcaller's Watch
 15101:Hunter's Bow
 15201:Seasoned Hunter's Bow
 15301:Raven Bow
@@ -153,13 +193,20 @@
 15416:Mouun's Moon
 15417:King's Squire
 15418:End of the Line
+15419:Ibis Piercer
+15424:Scion of the Blazing Sun
+15425:Song of Stillness
+15426:Cloudforged
+15427:Range Gauge
+15430:Flower-Wreathed Feathers
+15431:Chain Breaker
 15501:Skyward Harp
 15502:Amos' Bow
 15503:Elegy for the End
-15504:Kunwu's Wyrmbane
-15505:Primordial Jade Vista
-15506:Mirror Breaker
 15507:Polar Star
 15508:Aqua Simulacra
 15509:Thundering Pulse
 15511:Hunter's Path
+15512:The First Great Magic
+15513:Silvershower Heartstrings
+15514:Astral Vulture's Crimson Plumage

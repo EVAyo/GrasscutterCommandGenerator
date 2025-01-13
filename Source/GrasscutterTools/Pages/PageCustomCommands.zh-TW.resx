@@ -129,4 +129,7 @@
   <data name="BtnRemoveCustomCommand.Text" xml:space="preserve">
     <value>× 刪除</value>
   </data>
+  <data name="BtnAddHotKey.Text" xml:space="preserve">
+    <value>快捷鍵</value>
+  </data>
 </root>

@@ -154,6 +154,7 @@
             resources.ApplyResources(this.ListSubAttributionChecked, "ListSubAttributionChecked");
             this.ListSubAttributionChecked.FormattingEnabled = true;
             this.ListSubAttributionChecked.Name = "ListSubAttributionChecked";
+            this.ListSubAttributionChecked.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.ListSubAttributionChecked_MeasureItem);
             this.ListSubAttributionChecked.SelectedIndexChanged += new System.EventHandler(this.ListSubAttributionChecked_SelectedIndexChanged);
             // 
             // LblArtifactLevel
@@ -172,6 +173,7 @@
             this.CmbMainAttribution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbMainAttribution.FormattingEnabled = true;
             this.CmbMainAttribution.Name = "CmbMainAttribution";
+            this.CmbMainAttribution.SelectedIndexChanged += new System.EventHandler(this.ArtifactInputChanged);
             // 
             // LblMainAttribution
             // 

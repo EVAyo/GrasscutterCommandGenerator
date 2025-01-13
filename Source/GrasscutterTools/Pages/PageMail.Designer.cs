@@ -34,6 +34,7 @@
             this.BtnDeleteMailItem = new System.Windows.Forms.Button();
             this.TCMailRight = new System.Windows.Forms.TabControl();
             this.TPMailSelectableItemList = new System.Windows.Forms.TabPage();
+            this.LblClearFilter = new System.Windows.Forms.Label();
             this.ListMailSelectableItems = new System.Windows.Forms.ListBox();
             this.TxtMailSelectableItemFilter = new System.Windows.Forms.TextBox();
             this.PanelMailItemArgs = new System.Windows.Forms.Panel();
@@ -100,12 +101,21 @@
             // 
             // TPMailSelectableItemList
             // 
+            this.TPMailSelectableItemList.Controls.Add(this.LblClearFilter);
             this.TPMailSelectableItemList.Controls.Add(this.ListMailSelectableItems);
             this.TPMailSelectableItemList.Controls.Add(this.TxtMailSelectableItemFilter);
             this.TPMailSelectableItemList.Controls.Add(this.PanelMailItemArgs);
             resources.ApplyResources(this.TPMailSelectableItemList, "TPMailSelectableItemList");
             this.TPMailSelectableItemList.Name = "TPMailSelectableItemList";
             this.TPMailSelectableItemList.UseVisualStyleBackColor = true;
+            // 
+            // LblClearFilter
+            // 
+            resources.ApplyResources(this.LblClearFilter, "LblClearFilter");
+            this.LblClearFilter.BackColor = System.Drawing.Color.White;
+            this.LblClearFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblClearFilter.Name = "LblClearFilter";
+            this.LblClearFilter.Click += new System.EventHandler(this.LblClearFilter_Click);
             // 
             // ListMailSelectableItems
             // 
@@ -226,6 +236,7 @@
             resources.ApplyResources(this.ListMailItems, "ListMailItems");
             this.ListMailItems.FormattingEnabled = true;
             this.ListMailItems.Name = "ListMailItems";
+            this.ListMailItems.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.ListMailItems_MeasureItem);
             // 
             // LblMailItemsLabel
             // 
@@ -365,5 +376,6 @@
         private System.Windows.Forms.Label LblMailTitleLabel;
         private System.Windows.Forms.TextBox TxtMailSender;
         private System.Windows.Forms.Label LblMailSenderLabel;
+        private System.Windows.Forms.Label LblClearFilter;
     }
 }
